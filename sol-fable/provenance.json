@@ -1,0 +1,18 @@
+{
+  "upstream": "https://github.com/firecrawl/firecrawl",
+  "fork": "https://github.com/elgrande952/firecrawl",
+  "tag": "v2.11.162",
+  "commit": "7666c1f9ae8720a6bba271e0f60b6a217f8a5210",
+  "tree": "650a2f9867c4fb24ebb0415a990a97247523d62f",
+  "tracked_upstream_files": 1704,
+  "licence": "AGPL-3.0-or-later",
+  "source_files_modified": false,
+  "sha256": {
+    "LICENSE": "9b4649365c4f29d8f41301f4cda1e5bd9da51cf1bbb19ab9d568ff57d56e3b33",
+    "docker-compose.yaml": "fb587c7570e27ac8fd8aaf5b1bef48274530a2f22bd81a3d107a7e39f42a9b47"
+  },
+  "server_started": false,
+  "reason": "Docker Engine and Docker Compose unavailable in accessible execution environments",
+  "cloud_connector_changed": false,
+  "api_credit_purchase": false
+}

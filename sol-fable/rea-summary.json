@@ -1,0 +1,139 @@
+{
+  "repo": "https://github.com/firecrawl/firecrawl",
+  "release": "v2.11.162",
+  "commit": "7666c1f9ae8720a6bba271e0f60b6a217f8a5210",
+  "rea_version": "6.7.0",
+  "exit_code": 0,
+  "scope": "apps/playwright-service-ts",
+  "evidence_id": "ev_3d953fd07f9e44032040e3ae7b2afa8fefeaecb95f2895df85b88c6b6a9fa1bc",
+  "result_sha256": "6e05da6eda3b437dc8241f72c1c85a6c305e5c9fc741d518437074f45d4ee299",
+  "root_artifact_sha256": "f05b440436d96a812235bb4254ae3bb464f56d0f1f0f6c246b0e721b4d22c1ee",
+  "integrity_contradictions": [],
+  "node_counts": {
+    "artifact": 3,
+    "endpoint": 5,
+    "javascript-module": 19,
+    "unknown": 2,
+    "package": 1,
+    "javascript-asset": 2,
+    "electron-main": 1
+  },
+  "route_candidates": [
+    {
+      "value": "/health",
+      "mechanism": "call:app.get",
+      "evidence": {
+        "authority": "static-relationship-inference",
+        "state": "inferred",
+        "confidence": "low",
+        "artifact": {
+          "available": true,
+          "artifact_id": "art_8c962a7e2baa7d5482263d3ff91b08a4a458d17ad2e596781f5eb23405ff671b",
+          "sha256": "8c962a7e2baa7d5482263d3ff91b08a4a458d17ad2e596781f5eb23405ff671b"
+        },
+        "location": {
+          "available": true,
+          "value": {
+            "kind": "source-range",
+            "source": "api.ts",
+            "start": {
+              "line": 347,
+              "column": 0
+            },
+            "end": {
+              "line": 370,
+              "column": 2
+            }
+          }
+        },
+        "extractor": {
+          "name": "rea-javascript-artifact-reconstruction",
+          "version": "1",
+          "operation": "classify-static-endpoint-candidate",
+          "executable_sha256": null
+        },
+        "coverage": {
+          "status": "partial",
+          "truncated": false,
+          "omitted_count": null,
+          "limits": []
+        },
+        "limitations": [
+          "Static syntax does not prove that this relationship executes at runtime.",
+          "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+        ],
+        "evidence_ids": []
+      }
+    },
+    {
+      "value": "/scrape",
+      "mechanism": "call:app.post",
+      "evidence": {
+        "authority": "ast-static-analysis",
+        "state": "observed",
+        "confidence": "exact",
+        "artifact": {
+          "available": true,
+          "artifact_id": "art_8c962a7e2baa7d5482263d3ff91b08a4a458d17ad2e596781f5eb23405ff671b",
+          "sha256": "8c962a7e2baa7d5482263d3ff91b08a4a458d17ad2e596781f5eb23405ff671b"
+        },
+        "location": {
+          "available": true,
+          "value": {
+            "kind": "source-range",
+            "source": "api.ts",
+            "start": {
+              "line": 372,
+              "column": 0
+            },
+            "end": {
+              "line": 559,
+              "column": 2
+            }
+          }
+        },
+        "extractor": {
+          "name": "rea-javascript-artifact-reconstruction",
+          "version": "1",
+          "operation": "discover-static-endpoint",
+          "executable_sha256": null
+        },
+        "coverage": {
+          "status": "partial",
+          "truncated": false,
+          "omitted_count": null,
+          "limits": []
+        },
+        "limitations": [
+          "AST coverage is incomplete; omitted or dynamic facts must not be interpreted as absence."
+        ],
+        "evidence_ids": []
+      }
+    }
+  ],
+  "limits": [
+    "Static TypeScript analysis only; no application or browser was executed.",
+    "This scope is the Playwright service, not full Firecrawl.",
+    "External dependency resolution and dynamic relationships remain incomplete."
+  ],
+  "runtime_receipt": {
+    "status": "ready",
+    "rea_version": "6.7.0",
+    "node": "/usr/local/bin/node",
+    "node_version": "v24.22.1",
+    "rea_cli": "/home/user/sol-fable-rea/runtime/node_modules/rea-agents/scripts/rea.mjs",
+    "runtime": "/home/user/sol-fable-rea/runtime",
+    "npm_installed_this_run": true,
+    "rea_installed_this_run": true,
+    "install_method": "npm ci",
+    "manifests_sha256": {
+      "package.json": "a0cd1890b0af265e7eff030750d9e97828ef74069e24d6971bbe790c7d682cb7",
+      "package-lock.json": "433d9331d53c8ba1f796ca96e92b300a45e211a5ead5e1fe7d5ad4049e3e1bd8"
+    },
+    "optional_dependencies_omitted": true,
+    "install_scripts_ignored": true,
+    "agent_configuration_changed": false,
+    "models_downloaded": 0,
+    "paid_api_calls": 0
+  }
+}
