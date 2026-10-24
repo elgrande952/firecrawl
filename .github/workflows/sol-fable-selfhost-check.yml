@@ -1,0 +1,53 @@
+name: Sol-Fable independent Firecrawl verification
+on:
+  workflow_dispatch:
+    inputs:
+      source_sha:
+        description: Exact commit on the Sol-Fable self-host branch
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: sol-fable-selfhost-verification
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.repository == 'elgrande952/firecrawl' && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      TARGET_SHA: ${{ inputs.source_sha }}
+    steps:
+      - name: Check out exact public source without extra actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$TARGET_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init .
+          git remote add origin https://github.com/elgrande952/firecrawl.git
+          git fetch --depth=1 origin "$TARGET_SHA"
+          git checkout --detach FETCH_HEAD
+          git fetch --depth=1 origin 7666c1f9ae8720a6bba271e0f60b6a217f8a5210
+          test "$(git rev-parse HEAD)" = "$TARGET_SHA"
+      - name: Verify launch scripts and configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s sol-fable/deploy/tests -v
+          python3 sol-fable/deploy/control.py init
+          python3 sol-fable/deploy/control.py config
+          docker version
+          df -h .
+      - name: Build and run the five official services
+        run: python3 sol-fable/deploy/control.py up
+      - name: Verify a real public webpage scrape
+        run: python3 sol-fable/deploy/smoke.py
+      - name: Stop the temporary test stack
+        if: always()
+        shell: bash
+        run: |
+          if test -f sol-fable/deploy/.state/credentials.env; then
+            python3 sol-fable/deploy/control.py status || true
+            python3 sol-fable/deploy/control.py stop || true
+          fi
