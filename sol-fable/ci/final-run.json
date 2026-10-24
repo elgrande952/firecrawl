@@ -1,0 +1,54 @@
+{
+  "run_id": 40125178187,
+  "job_id": 120964962059,
+  "run_url": "https://github.com/elgrande952/firecrawl/actions/runs/40125178187",
+  "workflow_sha": "55ca2426e0e4960e78d7fe04c8b77918ee69a339",
+  "source_sha": "5632ed527d274b503b282558230e060cb5affae1",
+  "conclusion": "success",
+  "scope": "Temporary public GitHub Actions verification, not permanent hosting",
+  "launcher_tests_passed": 8,
+  "checks": [
+    {
+      "timestamp_utc": "2026-10-24T19:30:24.4733131Z",
+      "status": "PASS",
+      "live_scrape": true,
+      "url": "https://example.com",
+      "page_status": 200,
+      "markdown_length": 958
+    },
+    {
+      "timestamp_utc": "2026-10-24T19:30:30.4708948Z",
+      "status": "PASS",
+      "real_mcp_scrape": true,
+      "simulated_api": false,
+      "api_url": "http://127.0.0.1:3002",
+      "server": {
+        "name": "firecrawl-fastmcp",
+        "version": "3.34.1"
+      },
+      "page_status": 200,
+      "markdown_length": 958
+    }
+  ],
+  "healthy_service_lines": [
+    "2026-10-24T19:30:01.4276875Z  Container firecrawl-sol-fable-nuq-postgres-1  Healthy",
+    "2026-10-24T19:30:01.4282279Z  Container firecrawl-sol-fable-playwright-service-1  Healthy",
+    "2026-10-24T19:30:06.4278316Z  Container firecrawl-sol-fable-redis-1  Healthy",
+    "2026-10-24T19:30:07.4281167Z  Container firecrawl-sol-fable-rabbitmq-1  Healthy",
+    "2026-10-24T19:30:08.0754768Z  Container firecrawl-sol-fable-redis-1  Healthy",
+    "2026-10-24T19:30:08.0755839Z  Container firecrawl-sol-fable-nuq-postgres-1  Healthy",
+    "2026-10-24T19:30:08.0756822Z  Container firecrawl-sol-fable-playwright-service-1  Healthy",
+    "2026-10-24T19:30:08.0757733Z  Container firecrawl-sol-fable-rabbitmq-1  Healthy",
+    "2026-10-24T19:30:24.0714517Z  Container firecrawl-sol-fable-api-1  Healthy"
+  ],
+  "cleanup_lines": [
+    "2026-10-24T19:30:31.4417510Z  Container firecrawl-sol-fable-api-1  Stopped",
+    "2026-10-24T19:30:31.5957412Z  Container firecrawl-sol-fable-nuq-postgres-1  Stopped",
+    "2026-10-24T19:30:31.6252015Z  Container firecrawl-sol-fable-redis-1  Stopped",
+    "2026-10-24T19:30:31.6387416Z  Container firecrawl-sol-fable-playwright-service-1  Stopped",
+    "2026-10-24T19:30:32.7074325Z  Container firecrawl-sol-fable-rabbitmq-1  Stopped"
+  ],
+  "all_five_services_stopped": true,
+  "source_input_evidence": "2026-10-24T19:24:54.8947765Z   TARGET_SHA: 5632ed527d274b503b282558230e060cb5affae1",
+  "content_saved": "Only status, public target URL, character counts and service lifecycle; no page body or credentials"
+}

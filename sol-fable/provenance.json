@@ -12,7 +12,9 @@
     "docker-compose.yaml": "fb587c7570e27ac8fd8aaf5b1bef48274530a2f22bd81a3d107a7e39f42a9b47"
   },
   "server_started": false,
-  "reason": "Docker Engine and Docker Compose unavailable in accessible execution environments",
+  "reason": "Docker Engine and Docker Compose unavailable during the initial local inspection",
   "cloud_connector_changed": false,
-  "api_credit_purchase": false
+  "api_credit_purchase": false,
+  "observation_scope": "Initial local observation before the later GitHub Actions integration tests",
+  "current_verification": "verification-2026-10-24.json"
 }

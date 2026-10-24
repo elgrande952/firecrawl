@@ -16,5 +16,16 @@
   "runtime_status": "deployment_prepared_not_deployed",
   "review_fixes": [
     "stop/status remain available when tracked source changes"
-  ]
+  ],
+  "observation_scope": "Local launcher and Compose configuration checks before the later GitHub Actions integration tests",
+  "current_verification": "../verification-2026-10-24.json",
+  "later_ci_verification": {
+    "run_id": 40125178187,
+    "source_commit": "5632ed527d274b503b282558230e060cb5affae1",
+    "full_stack_functional_test": "PASS",
+    "real_direct_scrape": "PASS",
+    "real_mcp_scrape": "PASS",
+    "temporary_services_stopped": true,
+    "receipt": "../ci/final-run.json"
+  }
 }

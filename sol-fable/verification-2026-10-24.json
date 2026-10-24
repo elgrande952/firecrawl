@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-24",
+  "timezone": "Europe/Paris",
+  "upstream_release": "v2.11.162",
+  "upstream_commit": "7666c1f9ae8720a6bba271e0f60b6a217f8a5210",
+  "copy_commit_tested": "5632ed527d274b503b282558230e060cb5affae1",
+  "upstream_files_identical": 1704,
+  "source_integrity": "PASS",
+  "rea": {
+    "executions": 8,
+    "distinct_files_parsed": 160,
+    "broad_graphs": "partial_result_budgets",
+    "focused_analyses": 5,
+    "http_execution": false
+  },
+  "playwright": {
+    "compiled": true,
+    "health_http": 200,
+    "controlled_javascript_render": "PASS",
+    "controlled_404": "PASS",
+    "missing_url_rejected": true,
+    "private_url_rejected_by_default": true,
+    "public_scrape": "NOT_VALIDATED_DNS_FILTER",
+    "source_files_unchanged": 11
+  },
+  "mcp": {
+    "version": "3.34.1",
+    "installed_in_isolated_repository": true,
+    "registered_tools": 26,
+    "protocol": "PASS_WITH_SIMULATED_API",
+    "real_scrape": "PASS",
+    "global_chatgpt_settings_changed": false,
+    "real_scrape_status_code": 200,
+    "real_scrape_markdown_characters": 958,
+    "real_scrape_simulated_api": false,
+    "real_scrape_at": "2026-10-24T21:30:30+02:00",
+    "integration_compatibility_fix": "Omit the optional FIRECRAWL_INTEGRATION override rejected by the pinned API"
+  },
+  "deployment": {
+    "launcher_tests_passed": 8,
+    "compose_config": "PASS",
+    "github_run_url": "https://github.com/elgrande952/firecrawl/actions/runs/40125178187",
+    "full_stack": "PASS",
+    "production": "NOT_DEPLOYED",
+    "github_run_id": 40125178187,
+    "github_job_id": 120964962059,
+    "workflow_commit": "55ca2426e0e4960e78d7fe04c8b77918ee69a339",
+    "workflow_conclusion": "success",
+    "healthy_services": [
+      "api",
+      "playwright-service",
+      "redis",
+      "rabbitmq",
+      "nuq-postgres"
+    ],
+    "public_direct_scrape": "PASS",
+    "page_status_code": 200,
+    "markdown_characters": 958,
+    "temporary_services_stopped": true,
+    "services_stopped_at": "2026-10-24T21:30:32+02:00",
+    "hosting_scope": "temporary_standard_GitHub_Actions_runner",
+    "recovery_and_load_tests": "NOT_RUN"
+  },
+  "scope_preserved": {
+    "railway_changes": false,
+    "ollama_changes": false,
+    "paid_api_calls": false,
+    "new_model_downloads": false
+  },
+  "copied_upstream_schedules": {
+    "status": "disabled_in_fork_only",
+    "workflows": [
+      "npm-audit.yml",
+      "publish-elixir-sdk.yml"
+    ],
+    "source_files_preserved": true,
+    "reason": "Original project scheduled audit/remediation and package publication are outside the independent copy test"
+  },
+  "verified_at": "2026-10-24T21:30:33+02:00",
+  "not_functionally_tested": [
+    "crawl",
+    "map",
+    "search",
+    "Agent",
+    "Browser",
+    "Interact",
+    "AI-backed extraction"
+  ],
+  "cloud_feature_parity": "NOT_ESTABLISHED_EXTERNAL_SERVICES_MISSING",
+  "evidence": {
+    "rea_archive": "evidence/rea-extended-evidence.zip",
+    "rea_archive_sha256": "2f1351aa00d12f7b7932febb5d19b701899490c36c758a90a7179a2f222d50ae",
+    "ci_final": "ci/final-run.json",
+    "protocol": "mcp/protocol-verification.json",
+    "playwright": "runtime-tests/runtime-verification.json"
+  }
+}

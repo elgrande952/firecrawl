@@ -41,7 +41,9 @@ Aucune action du lanceur ne supprime les volumes. Les volumes persistants ne con
 
 L'API n'a pas d'authentification et reste accessible uniquement depuis la boucle locale de l'hôte Docker. Ne pas modifier la publication de port pour la rendre publique sans authentification et HTTPS. Le projet Compose réservé est `firecrawl-sol-fable` ; ne pas l'employer pour une autre pile.
 
-La validation réalisée porte sur le lanceur et le contrat Compose. **Le démarrage complet, les migrations, les extractions et le comportement sous charge ne sont pas validés dans l'environnement courant, qui ne dispose pas d'un moteur Docker.** Consulter `validation.json` pour les contrôles effectivement exécutés.
+Le lanceur a réussi huit tests locaux et la configuration a été rendue avec Docker Compose officiel. La pile complète a ensuite été construite et démarrée dans GitHub Actions : cinq services sains et collecte Internet réelle réussie. L'environnement local de travail reste dépourvu de Docker Engine. Consulter `validation.json` et le [reçu consolidé](../verification-2026-10-24.json) pour les preuves exactes.
+
+Ces contrôles ne valident ni une exploitation permanente, ni la restauration des bases, ni le comportement sous charge. Le contrôle des sources du lanceur compare les fichiers suivis des chemins de construction au commit amont ; il ne constitue pas un inventaire exhaustif des fichiers non suivis pouvant entrer dans un contexte Docker.
 
 Tests du lanceur, sans Docker ni accès payant :
 

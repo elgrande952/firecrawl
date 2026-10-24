@@ -17,4 +17,12 @@ Un client MCP local peut utiliser `python3` comme commande, avec le chemin absol
 
 `python3 test_protocol.py -v` lance le véritable paquet officiel contre une API locale simulée. Il vérifie initialisation MCP, liste des outils, appel `firecrawl_scrape`, routage vers `/v2/scrape`, retour de la réponse et absence de transmission d'une clé cloud héritée. Les deux tests ont réussi. Voir `protocol-verification.json`.
 
-**Ce test ne démontre pas une collecte Internet ni le fonctionnement de la pile Firecrawl.** Les 26 outils annoncés par le paquet ne sont pas 26 fonctions auto-hébergées validées. Certains, dont Agent et Interact, requièrent des services externes non inclus. Le lanceur désactive les outils de retour d'expérience du cloud, sans modifier le paquet officiel.
+Ce contrôle simulé est complété par `live_check.py`, qui a réellement appelé le MCP officiel contre la pile Firecrawl indépendante dans [GitHub Actions](https://github.com/elgrande952/firecrawl/actions/runs/40125178187). Le 24 octobre 2026 à 21 h 30, heure de Paris, `firecrawl_scrape` a récupéré `https://example.com` : statut de page 200, 958 caractères de Markdown, sans API simulée. Le test a réussi et les services temporaires ont été arrêtés. Le contrôle est reproductible depuis la racine du dépôt, après démarrage de la pile et installation npm :
+
+```bash
+python3 sol-fable/mcp/live_check.py
+```
+
+Le lanceur ne définit pas `FIRECRAWL_INTEGRATION` : une valeur personnalisée avait été refusée par l'API v2.11.162 pendant la seconde vérification. Cette incompatibilité a été corrigée et le parcours réel a été revérifié.
+
+Les 26 outils annoncés par le paquet ne sont pas 26 fonctions auto-hébergées validées. Certains, dont Agent et Interact, requièrent des services externes non inclus. Le lanceur désactive les outils de retour d'expérience du cloud, sans modifier le paquet officiel.
