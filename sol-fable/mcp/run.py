@@ -31,7 +31,7 @@ def child_env(api_url, source):
     env = {k: source[k] for k in ('PATH', 'HOME', 'TMPDIR', 'TEMP', 'TMP', 'SYSTEMROOT',
                                   'LANG', 'LC_ALL', 'SSL_CERT_FILE', 'SSL_CERT_DIR') if k in source}
     env.update(FIRECRAWL_API_URL=api_url, FIRECRAWL_NO_SEARCH_FEEDBACK='true',
-               FIRECRAWL_NO_ENDPOINT_FEEDBACK='true', FIRECRAWL_INTEGRATION='sol-fable-self-hosted')
+               FIRECRAWL_NO_ENDPOINT_FEEDBACK='true')
     # No inherited cloud credentials, HTTP mode, proxies or paid-provider variables.
     if source.get('FIRECRAWL_SELF_HOSTED_API_KEY'):
         env['FIRECRAWL_API_KEY'] = source['FIRECRAWL_SELF_HOSTED_API_KEY']

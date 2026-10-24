@@ -26,11 +26,13 @@ class ContractTest(unittest.TestCase):
                 runner.validate_url(url)
         clean = runner.child_env('http://127.0.0.1:3002', {
             'FIRECRAWL_API_KEY': 'cloud-do-not-forward', 'CLOUD_SERVICE': 'true',
-            'OPENAI_API_KEY': 'never-forward', 'HTTP_STREAMABLE_SERVER': 'true', 'PATH': '/bin'})
+            'OPENAI_API_KEY': 'never-forward', 'HTTP_STREAMABLE_SERVER': 'true', 'PATH': '/bin',
+            'FIRECRAWL_INTEGRATION': 'unsupported-custom-integration'})
         self.assertNotIn('FIRECRAWL_API_KEY', clean)
         self.assertNotIn('OPENAI_API_KEY', clean)
         self.assertNotIn('CLOUD_SERVICE', clean)
         self.assertNotIn('HTTP_STREAMABLE_SERVER', clean)
+        self.assertNotIn('FIRECRAWL_INTEGRATION', clean)
 
     def test_official_protocol_against_simulated_api(self):
         captured = []
@@ -101,6 +103,7 @@ class ContractTest(unittest.TestCase):
             self.assertFalse(result.get('isError'), result)
             self.assertIn('LOCAL_MOCK_MARKER', json.dumps(result))
             self.assertTrue(any(x['path']=='/v2/scrape' for x in captured), captured)
+            self.assertTrue(all('integration' not in x.get('body', {}) for x in captured), captured)
             self.assertTrue(all(not x['authorization_present'] for x in captured), captured)
             evidence = {'scope': 'Official MCP transport against simulated local API; not a live scrape',
                         'package': 'firecrawl-mcp@3.34.1', 'serverInfo': initialized.get('serverInfo'),

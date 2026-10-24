@@ -1,0 +1,39 @@
+{
+  "run_id": 40124612089,
+  "job_id": 120963263525,
+  "url": "https://github.com/elgrande952/firecrawl/actions/runs/40124612089",
+  "source_commit": "0f132f1bdb71deba26d5b22d458866158aacca6e",
+  "job_conclusion": "failure",
+  "build_and_stack_start": "success",
+  "five_services_healthy": true,
+  "live_scrape": "passed",
+  "live_scrape_response": {
+    "status": "PASS",
+    "live_scrape": true,
+    "url": "https://example.com",
+    "page_status": 200,
+    "markdown_length": 958
+  },
+  "live_mcp": "failed",
+  "cause": "The launcher sends integration=sol-fable-self-hosted, outside the enum accepted by the pinned API.",
+  "proposed_fix": "Omit FIRECRAWL_INTEGRATION so the official MCP adds only its normal origin field.",
+  "cleanup": "all five containers stopped",
+  "evidence_log_lines": [
+    "2026-10-24T19:22:28.1507799Z  Container firecrawl-sol-fable-nuq-postgres-1  Healthy",
+    "2026-10-24T19:22:28.1523245Z  Container firecrawl-sol-fable-playwright-service-1  Healthy",
+    "2026-10-24T19:22:33.1507008Z  Container firecrawl-sol-fable-redis-1  Healthy",
+    "2026-10-24T19:22:33.6501112Z  Container firecrawl-sol-fable-rabbitmq-1  Healthy",
+    "2026-10-24T19:22:34.2707451Z  Container firecrawl-sol-fable-redis-1  Healthy",
+    "2026-10-24T19:22:34.2711063Z  Container firecrawl-sol-fable-rabbitmq-1  Healthy",
+    "2026-10-24T19:22:34.2711819Z  Container firecrawl-sol-fable-nuq-postgres-1  Healthy",
+    "2026-10-24T19:22:34.2714800Z  Container firecrawl-sol-fable-playwright-service-1  Healthy",
+    "2026-10-24T19:22:49.7706984Z  Container firecrawl-sol-fable-api-1  Healthy",
+    "2026-10-24T19:22:50.2220944Z {\"status\": \"PASS\", \"live_scrape\": true, \"url\": \"https://example.com\", \"page_status\": 200, \"markdown_length\": 958}",
+    "2026-10-24T19:22:55.6317986Z AssertionError: {'content': [{'type': 'text', 'text': \"Tool 'firecrawl_scrape' execution failed: Invalid enum value. Expected 'dify' | 'zapier' | 'pipedream' | 'raycast' | 'langchain' | 'crewai' | 'llamaindex' | 'n8n' | 'camelai' | 'make' | 'flowise' | 'metagpt' | 'relevanceai' | 'viasocket' | 'cli' | 'hermes' | 'gstack' | 'prometheus' (integration: Invalid enum value. Expected 'dify' | 'zapier' | 'pipedream' | 'raycast' | 'langchain' | 'crewai' | 'llamaindex' | 'n8n' | 'camelai' | 'make' | 'flowise' | 'metagpt' | 'relevanceai' | 'viasocket' | 'cli' | 'hermes' | 'gstack' | 'prometheus')\"}], 'isError': True}",
+    "2026-10-24T19:22:56.7018594Z  Container firecrawl-sol-fable-api-1  Stopped",
+    "2026-10-24T19:22:56.8606501Z  Container firecrawl-sol-fable-nuq-postgres-1  Stopped",
+    "2026-10-24T19:22:56.8729649Z  Container firecrawl-sol-fable-playwright-service-1  Stopped",
+    "2026-10-24T19:22:56.8914940Z  Container firecrawl-sol-fable-redis-1  Stopped",
+    "2026-10-24T19:22:57.9214621Z  Container firecrawl-sol-fable-rabbitmq-1  Stopped"
+  ]
+}

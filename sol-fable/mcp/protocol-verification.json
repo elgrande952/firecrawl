@@ -48,8 +48,7 @@
         "formats": [
           "markdown"
         ],
-        "origin": "mcp-sol-fable-contract-test@3.34.1",
-        "integration": "sol-fable-self-hosted"
+        "origin": "mcp-sol-fable-contract-test@3.34.1"
       },
       "authorization_present": false
     }
