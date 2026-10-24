@@ -43,6 +43,13 @@ jobs:
         run: python3 sol-fable/deploy/control.py up
       - name: Verify a real public webpage scrape
         run: python3 sol-fable/deploy/smoke.py
+      - name: Verify the official MCP against the live local API
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          npm ci --ignore-scripts --no-audit --no-fund --prefix sol-fable/mcp
+          python3 sol-fable/mcp/live_check.py
       - name: Stop the temporary test stack
         if: always()
         shell: bash
