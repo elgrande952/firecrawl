@@ -1,0 +1,6 @@
+{
+  "content": "<!DOCTYPE html><html><head><title>Sol-Fable controlled fixture</title></head><body><main id=\"ready\">SOL_FABLE_JS_RENDERED</main><script>setTimeout(()=>{document.querySelector(\"#output\").textContent=\"SOL_FABLE_JS_RENDERED\";document.querySelector(\"#output\").id=\"ready\"},50)</script></body></html>",
+  "pageStatusCode": 404,
+  "contentType": "text/html; charset=utf-8",
+  "pageError": "Not Found"
+}

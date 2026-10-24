@@ -1,0 +1,1791 @@
+{
+  "source_release": "v2.11.162",
+  "source_commit": "7666c1f9ae8720a6bba271e0f60b6a217f8a5210",
+  "rea_version": "6.7.0",
+  "successful_executions": 8,
+  "unique_files_in_broad_scopes": 160,
+  "broad_scopes_coverage": "all listed files parsed, semantic relationships incomplete due result budgets",
+  "focused_scopes_count": 5,
+  "focused_result_budget_warnings": 0,
+  "runtime_validated": false,
+  "analyses": [
+    {
+      "scope": "apps/api/src/routes",
+      "file": "routes.json",
+      "exit_code": 0,
+      "elapsed_seconds": 5.74,
+      "bytes": 4664074,
+      "sha256": "a2ca083dbcb474732fcb9459740eeecbb6637ba4aed2093a88342ca3a6b2c626",
+      "evidence_id": "ev_f4050e6d52d438c6b594a3712bc87f4c684e66ea60ec7003ba0a075e946381b9",
+      "top_level_keys": [
+        "evidence_id",
+        "subject",
+        "provider",
+        "analysis_profile",
+        "predicate_type",
+        "operation",
+        "parameters",
+        "raw_result",
+        "normalized_result",
+        "confidence",
+        "authority",
+        "environment",
+        "limitations",
+        "relationship_coverage",
+        "locations",
+        "evidence_links"
+      ],
+      "statistics": {
+        "relevant_files": 7,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 55816,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 7,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 6305,
+        "findings": 397,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "partial",
+        "truncated": false,
+        "omitted_count": null
+      },
+      "semantic_coverage": {
+        "status": "partial",
+        "truncated": true,
+        "omitted_nodes": null,
+        "omitted_relations": null
+      },
+      "limitation_count": 13,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for shared.ts exceed the parent's result budget; complete static facts were retained on the file node",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for v0.ts exceed the parent's result budget; complete static facts were retained on the file node",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for v1.ts exceed the parent's result budget; complete static facts were retained on the file node"
+      ],
+      "resource_constraint_count": 7
+    },
+    {
+      "scope": "apps/api/src/controllers/v2",
+      "file": "controllers-v2.json",
+      "exit_code": 0,
+      "elapsed_seconds": 10.6,
+      "bytes": 2985514,
+      "sha256": "d2f3fc8a0a85c958140628aa7d819a4c631da5f27f9f73bec5046f64070c35fe",
+      "evidence_id": "ev_71f95438f30833c476eb880e7f04ab63007e31cf02a3607cfc0c6c98faa44895",
+      "top_level_keys": [
+        "evidence_id",
+        "subject",
+        "provider",
+        "analysis_profile",
+        "predicate_type",
+        "operation",
+        "parameters",
+        "raw_result",
+        "normalized_result",
+        "confidence",
+        "authority",
+        "environment",
+        "limitations",
+        "relationship_coverage",
+        "locations",
+        "evidence_links"
+      ],
+      "statistics": {
+        "relevant_files": 56,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 438140,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 56,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 57933,
+        "findings": 617,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "partial",
+        "truncated": false,
+        "omitted_count": null
+      },
+      "semantic_coverage": {
+        "status": "partial",
+        "truncated": true,
+        "omitted_nodes": null,
+        "omitted_relations": null
+      },
+      "limitation_count": 108,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for agent-status.ts exceed the parent's result budget; complete static facts were retained on the file node",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for agent.ts exceed the parent's result budget; complete static facts were retained on the file node",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for batch-scrape.ts exceed the parent's result budget; complete static facts were retained on the file node"
+      ],
+      "resource_constraint_count": 102
+    },
+    {
+      "scope": "apps/api/src/scraper/scrapeURL",
+      "file": "scrape-engine.json",
+      "exit_code": 0,
+      "elapsed_seconds": 10.45,
+      "bytes": 5036159,
+      "sha256": "b18bd18f82580cb2ea6f4f4f1f5abc08215dcaf53d1478e5865d276ce5b17766",
+      "evidence_id": "ev_68a88cd330c2abb56fe6930a4440a24c285c13a170f334f30476c2f8f08303a3",
+      "top_level_keys": [
+        "evidence_id",
+        "subject",
+        "provider",
+        "analysis_profile",
+        "predicate_type",
+        "operation",
+        "parameters",
+        "raw_result",
+        "normalized_result",
+        "confidence",
+        "authority",
+        "environment",
+        "limitations",
+        "relationship_coverage",
+        "locations",
+        "evidence_links"
+      ],
+      "statistics": {
+        "relevant_files": 97,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 690449,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 97,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 84151,
+        "findings": 559,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "partial",
+        "truncated": false,
+        "omitted_count": null
+      },
+      "semantic_coverage": {
+        "status": "partial",
+        "truncated": true,
+        "omitted_nodes": null,
+        "omitted_relations": null
+      },
+      "limitation_count": 186,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for engines/fire-engine/branding-script/elements.ts exceed the parent's result budget; complete static facts were retained on the file node",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for engines/fire-engine/branding-script/images.ts exceed the parent's result budget; complete static facts were retained on the file node",
+        "Resource constraint during analyze_javascript_application: Expanded application relationships for engines/fire-engine/branding-script/index.ts exceed the parent's result budget; complete static facts were retained on the file node"
+      ],
+      "resource_constraint_count": 180
+    },
+    {
+      "scope": "apps/api/src/routes/v2.ts",
+      "analysis_input": "isolated-copy-with-identical-sha256",
+      "file": "v2-routes-focused.json",
+      "exit_code": 0,
+      "elapsed_seconds": 4.13,
+      "bytes": 3094602,
+      "sha256": "b6dad6493bf058f4652723de77505c54b614dcb7db0c965465a9956d2444ed71",
+      "source_sha256": "9b491b0fe04a36fcdf8ae55a7650b03f2d508551d82035970e3c8186b3e71992",
+      "evidence_id": "ev_4bf0d0a6d54a6d53fe02a46ac3768eb9aaad276f3b99b95589fbe17c3e1f0f56",
+      "statistics": {
+        "relevant_files": 1,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 17328,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 1,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 1801,
+        "findings": 199,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "limited": false,
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "complete",
+        "truncated": false,
+        "omitted_count": 0
+      },
+      "semantic_coverage": {
+        "status": "unknown",
+        "truncated": false,
+        "omitted_nodes": 0,
+        "omitted_relations": 0
+      },
+      "limitation_count": 5,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "resource_constraint_count": 0
+    },
+    {
+      "scope": "apps/api/src/controllers/v2/scrape.ts",
+      "analysis_input": "isolated-copy-with-identical-sha256",
+      "file": "scrape-focused.json",
+      "exit_code": 0,
+      "elapsed_seconds": 3.98,
+      "bytes": 2843669,
+      "sha256": "09ac2f475e500c40f18a37897bd93229a12d8ae66d7e302c6372a550b1a6b8ab",
+      "source_sha256": "b9d77289da22ff8b924f56016d531ba14d7cf215097f100cf095e671c2c13283",
+      "evidence_id": "ev_02e43bc30d9787d21c69cf2a9296d223dad7983636d6290f7d3bc81e3a4bca3e",
+      "statistics": {
+        "relevant_files": 1,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 19899,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 1,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 2339,
+        "findings": 62,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "limited": false,
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "complete",
+        "truncated": false,
+        "omitted_count": 0
+      },
+      "semantic_coverage": {
+        "status": "unknown",
+        "truncated": false,
+        "omitted_nodes": 0,
+        "omitted_relations": 0
+      },
+      "limitation_count": 5,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "resource_constraint_count": 0
+    },
+    {
+      "scope": "apps/api/src/controllers/v2/crawl.ts",
+      "analysis_input": "isolated-copy-with-identical-sha256",
+      "file": "crawl-focused.json",
+      "exit_code": 0,
+      "elapsed_seconds": 3.48,
+      "bytes": 1509390,
+      "sha256": "cfe164430188a1b2a8fa4e4fa3ae48d94ab64dcbf080893bb8fadcfd020cf625",
+      "source_sha256": "76a7dbb950b54e58ecc3df9b1e8420961c2e379be022be76aaeb7d03719fe90e",
+      "evidence_id": "ev_a69566e93b311c31c4fd8e29a92d54a5df88ac54528bcda30a92afc1b8898303",
+      "statistics": {
+        "relevant_files": 1,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 11652,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 1,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 1477,
+        "findings": 55,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "limited": false,
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "complete",
+        "truncated": false,
+        "omitted_count": 0
+      },
+      "semantic_coverage": {
+        "status": "unknown",
+        "truncated": false,
+        "omitted_nodes": 0,
+        "omitted_relations": 0
+      },
+      "limitation_count": 5,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "resource_constraint_count": 0
+    },
+    {
+      "scope": "apps/api/src/controllers/v2/map.ts",
+      "analysis_input": "isolated-copy-with-identical-sha256",
+      "file": "map-focused.json",
+      "exit_code": 0,
+      "elapsed_seconds": 3.48,
+      "bytes": 1318797,
+      "sha256": "9906eebca15429bc3e52729a95136a8e8dbb186b0d994037e286c4c6a0d49411",
+      "source_sha256": "f86e605db6a74401b242258d3c25ffc724f31eabdebc9e6b100e9589f165f6c1",
+      "evidence_id": "ev_c6da5330ae2d5332ca30bcbf5612cc93434532575a8a16c47b0886f2bc45c8f2",
+      "statistics": {
+        "relevant_files": 1,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 9310,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 1,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 1309,
+        "findings": 39,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "limited": false,
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "complete",
+        "truncated": false,
+        "omitted_count": 0
+      },
+      "semantic_coverage": {
+        "status": "unknown",
+        "truncated": false,
+        "omitted_nodes": 0,
+        "omitted_relations": 0
+      },
+      "limitation_count": 5,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "resource_constraint_count": 0
+    },
+    {
+      "scope": "apps/api/src/controllers/v2/search.ts",
+      "analysis_input": "isolated-copy-with-identical-sha256",
+      "file": "search-focused.json",
+      "exit_code": 0,
+      "elapsed_seconds": 3.73,
+      "bytes": 1482657,
+      "sha256": "4d436e4ae7e61dea800eed638bbfad56382cbbc7e1079452342f3c37be99587c",
+      "source_sha256": "70c4789c494a5ed6090f6398ac17754fbdfd238cec2dd6633c5b762177ea0504",
+      "evidence_id": "ev_93835ae11a442ef02eacaf7cd28d8ff4e4ffcbf832b47a0b3de55522e813b50e",
+      "statistics": {
+        "relevant_files": 1,
+        "nested_asar_containers": 0,
+        "text_bytes_read": 11527,
+        "invalid_utf8_files": 0,
+        "parsed_javascript_files": 1,
+        "skipped_javascript_files": 0,
+        "visited_ast_nodes": 1525,
+        "findings": 52,
+        "modules": 0,
+        "parse_failures": 0
+      },
+      "limited": false,
+      "integrity_contradictions": [],
+      "graph_coverage": {
+        "status": "complete",
+        "truncated": false,
+        "omitted_count": 0
+      },
+      "semantic_coverage": {
+        "status": "unknown",
+        "truncated": false,
+        "omitted_nodes": 0,
+        "omitted_relations": 0
+      },
+      "limitation_count": 5,
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "resource_constraint_count": 0
+    }
+  ],
+  "v2_endpoint_observations": [
+    {
+      "value": "/keyless/eligibility",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 173,
+          "column": 0
+        },
+        "end": {
+          "line": 173,
+          "column": 72
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/search",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 180,
+          "column": 0
+        },
+        "end": {
+          "line": 187,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/search/:jobId/feedback",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 189,
+          "column": 0
+        },
+        "end": {
+          "line": 194,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/feedback",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 196,
+          "column": 0
+        },
+        "end": {
+          "line": 200,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/parse/upload-url",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 202,
+          "column": 0
+        },
+        "end": {
+          "line": 207,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/parse/upload/:uploadId",
+      "mechanism": "call:v2Router.put",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 209,
+          "column": 0
+        },
+        "end": {
+          "line": 214,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/parse",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 216,
+          "column": 0
+        },
+        "end": {
+          "line": 223,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/scrape",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 225,
+          "column": 0
+        },
+        "end": {
+          "line": 232,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/scrape/:jobId",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 234,
+          "column": 0
+        },
+        "end": {
+          "line": 239,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/scrape/:jobId/interact",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 241,
+          "column": 0
+        },
+        "end": {
+          "line": 246,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/scrape/:jobId/interact",
+      "mechanism": "call:v2Router.delete",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 248,
+          "column": 0
+        },
+        "end": {
+          "line": 253,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/batch/scrape",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 255,
+          "column": 0
+        },
+        "end": {
+          "line": 262,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/map",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 264,
+          "column": 0
+        },
+        "end": {
+          "line": 270,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/crawl",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 272,
+          "column": 0
+        },
+        "end": {
+          "line": 280,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/crawl/params-preview",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 282,
+          "column": 0
+        },
+        "end": {
+          "line": 287,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/crawl/ongoing",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 289,
+          "column": 0
+        },
+        "end": {
+          "line": 293,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/crawl/active",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 295,
+          "column": 0
+        },
+        "end": {
+          "line": 299,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/crawl/:jobId",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 301,
+          "column": 0
+        },
+        "end": {
+          "line": 306,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/crawl/:jobId",
+      "mechanism": "call:v2Router.delete",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 308,
+          "column": 0
+        },
+        "end": {
+          "line": 313,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/batch/scrape/:jobId",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 331,
+          "column": 0
+        },
+        "end": {
+          "line": 336,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/batch/scrape/:jobId",
+      "mechanism": "call:v2Router.delete",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 338,
+          "column": 0
+        },
+        "end": {
+          "line": 343,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/batch/scrape/:jobId/errors",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 345,
+          "column": 0
+        },
+        "end": {
+          "line": 349,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/crawl/:jobId/errors",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 351,
+          "column": 0
+        },
+        "end": {
+          "line": 356,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/extract",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 358,
+          "column": 0
+        },
+        "end": {
+          "line": 366,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/extract/:jobId",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 368,
+          "column": 0
+        },
+        "end": {
+          "line": 374,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/agent",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 376,
+          "column": 0
+        },
+        "end": {
+          "line": 383,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/agent/:jobId",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 385,
+          "column": 0
+        },
+        "end": {
+          "line": 390,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/agent/:jobId",
+      "mechanism": "call:v2Router.delete",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 392,
+          "column": 0
+        },
+        "end": {
+          "line": 397,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/credit-usage",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 399,
+          "column": 0
+        },
+        "end": {
+          "line": 403,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/credit-usage/historical",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 405,
+          "column": 0
+        },
+        "end": {
+          "line": 409,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/token-usage",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 411,
+          "column": 0
+        },
+        "end": {
+          "line": 415,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/token-usage/historical",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 417,
+          "column": 0
+        },
+        "end": {
+          "line": 421,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/concurrency-check",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 423,
+          "column": 0
+        },
+        "end": {
+          "line": 427,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/queue-status",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 429,
+          "column": 0
+        },
+        "end": {
+          "line": 433,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/activity",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 435,
+          "column": 0
+        },
+        "end": {
+          "line": 439,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/threat-protection",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 441,
+          "column": 0
+        },
+        "end": {
+          "line": 445,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/threat-protection",
+      "mechanism": "call:v2Router.put",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 447,
+          "column": 0
+        },
+        "end": {
+          "line": 451,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/team/threat-protection/zscaler/test-connection",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 453,
+          "column": 0
+        },
+        "end": {
+          "line": 457,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/team/threat-protection/zscaler/categories",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 459,
+          "column": 0
+        },
+        "end": {
+          "line": 463,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/threat-protection/zscaler/sync",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 465,
+          "column": 0
+        },
+        "end": {
+          "line": 469,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/team/siem",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 471,
+          "column": 0
+        },
+        "end": {
+          "line": 475,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/team/siem",
+      "mechanism": "call:v2Router.put",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 477,
+          "column": 0
+        },
+        "end": {
+          "line": 481,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/team/siem/test",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 483,
+          "column": 0
+        },
+        "end": {
+          "line": 487,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/monitor",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 489,
+          "column": 0
+        },
+        "end": {
+          "line": 496,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/monitor",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 498,
+          "column": 0
+        },
+        "end": {
+          "line": 502,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/monitor/email/confirm",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 506,
+          "column": 0
+        },
+        "end": {
+          "line": 506,
+          "column": 76
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/monitor/email/unsubscribe",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 507,
+          "column": 0
+        },
+        "end": {
+          "line": 510,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/monitor/:monitorId",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 512,
+          "column": 0
+        },
+        "end": {
+          "line": 516,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/monitor/:monitorId",
+      "mechanism": "call:v2Router.patch",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 518,
+          "column": 0
+        },
+        "end": {
+          "line": 525,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/monitor/:monitorId",
+      "mechanism": "call:v2Router.delete",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 527,
+          "column": 0
+        },
+        "end": {
+          "line": 531,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/monitor/:monitorId/run",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 533,
+          "column": 0
+        },
+        "end": {
+          "line": 540,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/monitor/:monitorId/checks",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 542,
+          "column": 0
+        },
+        "end": {
+          "line": 546,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/monitor/:monitorId/checks/:checkId",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 548,
+          "column": 0
+        },
+        "end": {
+          "line": 552,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/slack/oauth/start",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 557,
+          "column": 0
+        },
+        "end": {
+          "line": 561,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/slack/oauth/callback",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 562,
+          "column": 0
+        },
+        "end": {
+          "line": 562,
+          "column": 73
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/slack/status",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 563,
+          "column": 0
+        },
+        "end": {
+          "line": 567,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/slack/channels",
+      "mechanism": "call:v2Router.get",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 568,
+          "column": 0
+        },
+        "end": {
+          "line": 572,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/slack/installation",
+      "mechanism": "call:v2Router.delete",
+      "state": "inferred",
+      "authority": "static-relationship-inference",
+      "confidence": "low",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 573,
+          "column": 0
+        },
+        "end": {
+          "line": 577,
+          "column": 1
+        }
+      },
+      "limitations": [
+        "Static syntax does not prove that this relationship executes at runtime.",
+        "The unbound method-like argument is only a candidate; its receiver does not establish a network call."
+      ]
+    },
+    {
+      "value": "/slack/commands",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 578,
+          "column": 0
+        },
+        "end": {
+          "line": 578,
+          "column": 63
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/slack/events",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 579,
+          "column": 0
+        },
+        "end": {
+          "line": 579,
+          "column": 59
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/browser/webhook/destroyed",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 619,
+          "column": 0
+        },
+        "end": {
+          "line": 622,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/support/ask",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 625,
+          "column": 0
+        },
+        "end": {
+          "line": 629,
+          "column": 1
+        }
+      },
+      "limitations": []
+    },
+    {
+      "value": "/support/docs-search",
+      "mechanism": "call:v2Router.post",
+      "state": "observed",
+      "authority": "ast-static-analysis",
+      "confidence": "exact",
+      "location": {
+        "kind": "source-range",
+        "source": "v2.ts",
+        "start": {
+          "line": 630,
+          "column": 0
+        },
+        "end": {
+          "line": 634,
+          "column": 1
+        }
+      },
+      "limitations": []
+    }
+  ],
+  "v2_endpoint_state_counts": {
+    "inferred": 33,
+    "observed": 30
+  },
+  "archive": {
+    "file": "rea-extended-evidence.zip",
+    "sha256": "2f1351aa00d12f7b7932febb5d19b701899490c36c758a90a7179a2f222d50ae",
+    "bytes": 3157367
+  }
+}

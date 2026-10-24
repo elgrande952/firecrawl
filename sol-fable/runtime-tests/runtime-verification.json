@@ -1,0 +1,181 @@
+{
+  "recorded_at_utc": "2026-10-24T19:01:34.301331+00:00",
+  "source": {
+    "repo": "https://github.com/firecrawl/firecrawl",
+    "tag": "v2.11.162",
+    "commit": "7666c1f9ae8720a6bba271e0f60b6a217f8a5210",
+    "component": "apps/playwright-service-ts",
+    "source_files_preserved": 11,
+    "sha256": {
+      "tsconfig.json": "ef7ef44892bef7c23bc2a97b3f8bfeaad3d5c1e7eb5210c32ae40d6b6487852f",
+      "api.ts": "8c962a7e2baa7d5482263d3ff91b08a4a458d17ad2e596781f5eb23405ff671b",
+      "audit-ci.jsonc": "34912f9f866c2b6029c5df800e6cd95a2eeab69632b37faeb5384c536352e2b1",
+      ".gitignore": "ed19d3c9c8a5e34d0179e0b1a9c2907d2e657738733e4a432a8cf81c76ce56f1",
+      "pnpm-workspace.yaml": "089a30cdfccd9132b1195eff6d86fe94c59fc22cc97001190172508d3d6297a2",
+      "README.md": "e01f9089862200bcff3635d1a0e07fc6af00ab5072f51a5465278a588a1a6aa4",
+      "package.json": "cd481a4cf140b97019793950cba4b8b9ec7fcc2a08e9f9d1fafb1561abaf0158",
+      "Dockerfile": "6aeca44203e4d83f46a6f20552672d3161c81890577a65ff000b51b97786362d",
+      "pnpm-lock.yaml": "b6c7c63c66c7c365b0835b720c6ad6ccf34984df2dbd9eca755bb7d36eeceeec",
+      ".dockerignore": "2e7698ed284c2636fc62bf1e844e3ae792d301958e779c9bf44a5355a9a6116c",
+      "helpers/get_error.ts": "1c15475f5f048c869be847c62dbfb9610cf4130ab93538db2c00dbd567d01aea"
+    }
+  },
+  "environment": {
+    "node_version": "v24.22.1",
+    "pnpm_version": "11.25.0",
+    "docker_cli": null,
+    "podman_cli": null,
+    "docker_socket": false,
+    "preexisting_chromium_found": false
+  },
+  "dependency_install": {
+    "command": "pnpm install --frozen-lockfile --ignore-scripts",
+    "exit_code": 0,
+    "packages_added": 100,
+    "lockfile_changed": false,
+    "lifecycle_scripts_executed": false,
+    "playwright_version": "1.58.1",
+    "typescript_version": "5.9.3"
+  },
+  "build": {
+    "command": "pnpm run build",
+    "exit_code": 0,
+    "output": "dist/api.js",
+    "output_bytes": 17962,
+    "output_sha256": "7147d9c0188fa23f161d6cd79d6bc5bc07244247b35d504361b9d7e2f1df7ac5"
+  },
+  "browser_install": {
+    "command": "PLAYWRIGHT_BROWSERS_PATH=<isolated directory> pnpm exec playwright install chromium --only-shell",
+    "requested_browser": "Chrome Headless Shell 145.0.7632.6 / Playwright build1208",
+    "download_url": "https://cdn.playwright.dev/builds/cft/145.0.7632.6/linux64/chrome-headless-shell-linux64.zip",
+    "http_status": 200,
+    "content_type": "text/html",
+    "content_length": 195,
+    "response_text": "Site Unavailable / Unable to access this site.",
+    "exit_code": 1,
+    "errors": [
+      "End of central directory record signature not found. Either not a zip file, or file is truncated.",
+      "Unable to update lock within the stale threshold"
+    ],
+    "installed": true,
+    "initial_attempt_failed": true,
+    "official_fallback": {
+      "metadata_url": "https://googlechromelabs.github.io/chrome-for-testing/145.0.7632.6.json",
+      "download_url": "https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.6/linux64/chrome-headless-shell-linux64.zip",
+      "http_status": 200,
+      "content_type": "application/zip",
+      "bytes": 116288461,
+      "archive_sha256": "2536e97d8f410df0394b3e7c4252e88ce9f239f04f3af4e247a26caf45baf49e",
+      "missing_shared_libraries": false,
+      "source_code_modified": false
+    }
+  },
+  "result": "COMPILATION_BROWSER_HEALTH_AND_LOCAL_JAVASCRIPT_RENDER_VERIFIED",
+  "scope_limits": [
+    "No full Firecrawl API, Redis, RabbitMQ, PostgreSQL or worker stack was started.",
+    "A controlled local HTML page rendered JavaScript through the original service and returned pageStatusCode200.",
+    "The original SSRF guard rejected example.com in this environment; it was not disabled for that public request.",
+    "Only the separate owned-local-fixture test enabled ALLOW_LOCAL_WEBHOOKS, through a temporary child-process environment.",
+    "Public-site collection remains unverified.",
+    "No source code was modified. No paid service, model, Railway service or global system Docker installation was used."
+  ],
+  "cleanup": {
+    "service_exit_confirmed": true,
+    "no_running_probe_session": true,
+    "listener_ports_closed": [
+      {
+        "port": 34073,
+        "closed": true
+      },
+      {
+        "port": 34074,
+        "closed": true
+      }
+    ]
+  },
+  "service_start_initial_failed": {
+    "command": "PORT=34073 PLAYWRIGHT_BROWSERS_PATH=<isolated directory> node dist/api.js",
+    "exit_code": 1,
+    "error": "browserType.launch: Executable does not exist at isolated chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell",
+    "http_health_test": "NOT_RUN_SERVER_FAILED_TO_START",
+    "http_scrape_test": "NOT_RUN_SERVER_FAILED_TO_START"
+  },
+  "service_runtime_test": {
+    "started_at": "2026-10-24T19:02:52.256096+00:00",
+    "source_unmodified": true,
+    "browser": "145.0.7632.6 / build1208",
+    "requests": [
+      {
+        "case": "valid_public_page",
+        "http_status": 200,
+        "pageStatusCode": 403,
+        "content_length": 0,
+        "has_example_domain": false,
+        "error": "Blocked insecure target URL \"https://example.com\": resolves to a private/internal address"
+      },
+      {
+        "case": "missing_url",
+        "http_status": 400,
+        "pageStatusCode": null,
+        "content_length": 0,
+        "has_example_domain": false,
+        "error": "URL is required"
+      },
+      {
+        "case": "private_url",
+        "http_status": 200,
+        "pageStatusCode": 403,
+        "content_length": 0,
+        "has_example_domain": false,
+        "error": "Blocked insecure target URL \"http://127.0.0.1:1\": resolves to a private/internal address"
+      }
+    ],
+    "health": {
+      "http_status": 200,
+      "body": {
+        "status": "healthy",
+        "maxConcurrentPages": 1,
+        "activePages": 0
+      }
+    },
+    "service_exit_code": 130,
+    "service_stopped": true
+  },
+  "updated_at_utc": "2026-10-24T19:04:36.370881+00:00",
+  "controlled_fixture_test": {
+    "started_at": "2026-10-24T19:04:11.410459+00:00",
+    "source_unmodified": true,
+    "scope": "OWNED_LOCAL_FIXTURE_ONLY",
+    "ALLOW_LOCAL_WEBHOOKS": "true in this temporary child process only",
+    "browser": "145.0.7632.6 / build1208",
+    "requests": [
+      {
+        "case": "javascript_render",
+        "http_status": 200,
+        "pageStatusCode": 200,
+        "content_length": 294,
+        "dynamic_dom_verified": true,
+        "error": null
+      },
+      {
+        "case": "fixture_404",
+        "http_status": 200,
+        "pageStatusCode": 404,
+        "content_length": 294,
+        "dynamic_dom_verified": true,
+        "error": "Not Found"
+      }
+    ],
+    "health": {
+      "http_status": 200,
+      "body": {
+        "status": "healthy",
+        "maxConcurrentPages": 1,
+        "activePages": 0
+      }
+    },
+    "service_exit_code": 130,
+    "service_stopped": true,
+    "fixture_stopped": true
+  }
+}

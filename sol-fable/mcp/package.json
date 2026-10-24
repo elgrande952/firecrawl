@@ -1,0 +1,9 @@
+{
+  "name": "sol-fable-firecrawl-local-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinned official MCP client for the independent Firecrawl copy",
+  "dependencies": {
+    "firecrawl-mcp": "3.34.1"
+  }
+}

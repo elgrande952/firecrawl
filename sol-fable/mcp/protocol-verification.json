@@ -1,0 +1,60 @@
+{
+  "scope": "Official MCP transport against simulated local API; not a live scrape",
+  "package": "firecrawl-mcp@3.34.1",
+  "serverInfo": {
+    "name": "firecrawl-fastmcp",
+    "version": "3.34.1"
+  },
+  "tool_count": 26,
+  "tools": [
+    "firecrawl_agent",
+    "firecrawl_agent_status",
+    "firecrawl_check_crawl_status",
+    "firecrawl_crawl",
+    "firecrawl_credit_usage",
+    "firecrawl_developer_search",
+    "firecrawl_find_tools",
+    "firecrawl_gov_search",
+    "firecrawl_interact",
+    "firecrawl_interact_stop",
+    "firecrawl_map",
+    "firecrawl_monitor_check",
+    "firecrawl_monitor_checks",
+    "firecrawl_monitor_create",
+    "firecrawl_monitor_delete",
+    "firecrawl_monitor_get",
+    "firecrawl_monitor_list",
+    "firecrawl_monitor_run",
+    "firecrawl_monitor_update",
+    "firecrawl_parse",
+    "firecrawl_research_inspect_paper",
+    "firecrawl_research_read_paper",
+    "firecrawl_research_related_papers",
+    "firecrawl_research_search_papers",
+    "firecrawl_scrape",
+    "firecrawl_search"
+  ],
+  "captured_requests": [
+    {
+      "method": "GET",
+      "path": "/v0/health/readiness",
+      "authorization_present": false
+    },
+    {
+      "method": "POST",
+      "path": "/v2/scrape",
+      "body": {
+        "url": "https://example.com",
+        "formats": [
+          "markdown"
+        ],
+        "origin": "mcp-sol-fable-contract-test@3.34.1",
+        "integration": "sol-fable-self-hosted"
+      },
+      "authorization_present": false
+    }
+  ],
+  "inherited_cloud_key_forwarded": false,
+  "status": "passed",
+  "lock_sha256": "07cc3c877eb742378dc89e85d85769ba4f7df89ca8436bb5c7cca03126cee981"
+}

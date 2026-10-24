@@ -1,0 +1,41 @@
+{
+  "started_at": "2026-10-24T19:02:52.256096+00:00",
+  "source_unmodified": true,
+  "browser": "145.0.7632.6 / build1208",
+  "requests": [
+    {
+      "case": "valid_public_page",
+      "http_status": 200,
+      "pageStatusCode": 403,
+      "content_length": 0,
+      "has_example_domain": false,
+      "error": "Blocked insecure target URL \"https://example.com\": resolves to a private/internal address"
+    },
+    {
+      "case": "missing_url",
+      "http_status": 400,
+      "pageStatusCode": null,
+      "content_length": 0,
+      "has_example_domain": false,
+      "error": "URL is required"
+    },
+    {
+      "case": "private_url",
+      "http_status": 200,
+      "pageStatusCode": 403,
+      "content_length": 0,
+      "has_example_domain": false,
+      "error": "Blocked insecure target URL \"http://127.0.0.1:1\": resolves to a private/internal address"
+    }
+  ],
+  "health": {
+    "http_status": 200,
+    "body": {
+      "status": "healthy",
+      "maxConcurrentPages": 1,
+      "activePages": 0
+    }
+  },
+  "service_exit_code": 130,
+  "service_stopped": true
+}

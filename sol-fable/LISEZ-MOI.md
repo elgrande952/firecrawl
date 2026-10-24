@@ -2,6 +2,13 @@
 
 Copie du dépôt officiel créée le 24 octobre 2026 pour Fabien, à sa demande. La branche `sol-fable-v2.11.162` conserve le code de la version officielle `v2.11.162`, commit `7666c1f9ae8720a6bba271e0f60b6a217f8a5210`. Les ajouts Sol-Fable sont regroupés dans ce dossier. La licence AGPL et les mentions d'origine sont conservées.
 
+## Améliorations vérifiées le 24 octobre 2026
+
+- Analyse REA élargie : huit exécutions, 160 fichiers distincts examinés ; voir [le rapport](evidence/REA-ANALYSE-ETENDUE.md).
+- Service Playwright officiel compilé et lancé : santé HTTP 200, rendu JavaScript réel sur une page de test contrôlée et traitement d’une réponse 404. La collecte Internet n’est pas validée dans cet environnement ; voir [les preuves](runtime-tests/runtime-verification.json).
+- [Kit de déploiement](deploy/README.md) : cinq services, volumes persistants, contrôles de santé et lanceur vérifié. Préférer ce kit au parcours d’évaluation minimal ci-dessous pour préparer l’exploitation.
+- [MCP officiel](mcp/README.md) : version verrouillée installée et communication vérifiée contre une API simulée. Aucune modification globale de ChatGPT/Codex et aucun raccordement permanent annoncé.
+
 ## État réel
 
 - Dépôt GitHub copié et branche dédiée créée.

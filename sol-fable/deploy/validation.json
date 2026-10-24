@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-24",
+  "compose_version": "5.6.1",
+  "compose_binary_sha256": "47737f4236e6d3ccea7291995203f8f018058783b4c3a9469119811a0b5db8c0",
+  "compose_source": "https://github.com/docker/compose/releases/download/v5.6.1/docker-compose-linux-x86_64",
+  "launcher_unit_tests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "actual_compose_config": "PASS",
+  "source_and_config_contracts": "PASS",
+  "engine_available": false,
+  "containers_started": false,
+  "full_stack_functional_test": "NOT_RUN",
+  "reason": "Docker Engine unavailable",
+  "runtime_status": "deployment_prepared_not_deployed",
+  "review_fixes": [
+    "stop/status remain available when tracked source changes"
+  ]
+}

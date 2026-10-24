@@ -1,0 +1,124 @@
+name: firecrawl-sol-fable
+
+x-logging: &logging
+  driver: json-file
+  options: {max-size: "10m", max-file: "3"}
+
+services:
+  api:
+    build:
+      context: ../../apps/api
+      args: {GIT_SHA: 7666c1f9ae8720a6bba271e0f60b6a217f8a5210}
+    command: [node, dist/src/harness.js, --start-docker]
+    init: true
+    restart: unless-stopped
+    ports: ["127.0.0.1:3002:3002"]
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3002"
+      EXTRACT_WORKER_PORT: "3004"
+      WORKER_PORT: "3005"
+      ENV: local
+      USE_DB_AUTHENTICATION: "false"
+      REDIS_URL: redis://redis:6379
+      REDIS_RATE_LIMIT_URL: redis://redis:6379
+      PLAYWRIGHT_MICROSERVICE_URL: http://playwright-service:3000/scrape
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run control.py init first}
+      POSTGRES_DB: postgres
+      POSTGRES_HOST: nuq-postgres
+      POSTGRES_PORT: "5432"
+      NUQ_RABBITMQ_URL: amqp://firecrawl:${RABBITMQ_PASSWORD:?Run control.py init first}@rabbitmq:5672
+      HARNESS_STARTUP_TIMEOUT_MS: "120000"
+      NUM_WORKERS_PER_QUEUE: "2"
+      CRAWL_CONCURRENT_REQUESTS: "2"
+      MAX_CONCURRENT_JOBS: "2"
+      BROWSER_POOL_SIZE: "2"
+    depends_on:
+      redis: {condition: service_healthy}
+      rabbitmq: {condition: service_healthy}
+      nuq-postgres: {condition: service_healthy}
+      playwright-service: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3002/v0/health/readiness').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      start_period: 120s
+      retries: 5
+    networks: [backend]
+    ulimits:
+      nofile: {soft: 65535, hard: 65535}
+    logging: *logging
+    stop_grace_period: 60s
+
+  playwright-service:
+    build: {context: ../../apps/playwright-service-ts, args: {PORT: "3000"}}
+    init: true
+    restart: unless-stopped
+    environment: {PORT: "3000", MAX_CONCURRENT_PAGES: "2"}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3000/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 15s
+      start_period: 60s
+      retries: 5
+    networks: [backend]
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    shm_size: 1gb
+    logging: *logging
+
+  redis:
+    image: redis:alpine
+    command: [redis-server, --appendonly, "yes", --bind, 0.0.0.0]
+    restart: unless-stopped
+    volumes: [redis-data:/data]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks: [backend]
+    logging: *logging
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: firecrawl
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:?Run control.py init first}
+    volumes: [rabbitmq-data:/var/lib/rabbitmq]
+    healthcheck:
+      test: [CMD, rabbitmq-diagnostics, -q, check_running]
+      interval: 10s
+      timeout: 5s
+      start_period: 30s
+      retries: 10
+    networks: [backend]
+    logging: *logging
+
+  nuq-postgres:
+    build: {context: ../../apps/nuq-postgres}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run control.py init first}
+      POSTGRES_DB: postgres
+    volumes: [postgres-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD, pg_isready, -h, 127.0.0.1, -U, postgres, -d, postgres]
+      interval: 10s
+      timeout: 5s
+      start_period: 30s
+      retries: 10
+    networks: [backend]
+    logging: *logging
+
+networks:
+  backend: {driver: bridge}
+
+volumes:
+  redis-data:
+  rabbitmq-data:
+  postgres-data:
